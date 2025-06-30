@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f5f5;
+  --foreground: #171717;
+}
+
+body, html {
+  position: relative;
+  z-index: auto;
+  min-height: 100vh;
+}
+
+section, main, header, footer, nav {
+  background: transparent;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, li, div {
+  color: inherit;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Remove body background and font-family override, Tailwind handles this */
+
+/* Use Tailwind classes for text color in components: text-black dark:text-white */
+
+/* Hide scrollbar utility */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Webkit */
+}
